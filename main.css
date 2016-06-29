@@ -1,0 +1,14 @@
+.box {
+	width: 300px;
+	height: 300px;
+	border: 2px solid red;
+	margin: 100px auto;
+	background-color: #FF4B45;
+}
+.color {
+	background-color: #73CB73;
+	text-align: center;
+	border: 2px solid green;
+}
+
+

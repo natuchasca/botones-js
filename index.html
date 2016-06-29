@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Cuadrados Animados</title>
+	<link rel="stylesheet" href="main.css">
+	<!-- Latest compiled and minified CSS -->
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous">
+</head>
+<body>
+	<div class="box text-center" id="box">
+		<button type="button" id="button-text" class="btn btn-primary" onclick="agregarTexto()">Texto</button>
+		<button type="button" id="button-color" class="btn btn-primary" onclick="cambioColor()">Color</button>
+		<button type="button" id="button-borrar" class="btn btn-primary" onclick="eliminarTexto()">Borrar</button>
+		<div id="textos">
+			
+		</div>
+	</div>
+
+	<script>
+			
+		function agregarTexto () {
+			var box = document.getElementById("textos");
+			var nuevo = document.createElement("p");
+			var escrito = document.createTextNode("Hola! soy un texto");
+			nuevo.appendChild(escrito);
+			box.appendChild(nuevo);
+		}
+
+
+		function cambioColor () {
+			var background = document.getElementById("box");
+			background.setAttribute("class", "color box");
+		}
+
+		function eliminarTexto () {
+			var box = document.getElementById("textos");
+			box.innerHTML = "";
+		}
+	</script>
+</body>
+</html>
